@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BOUDI GAMES – Votre univers gaming en Tunisie</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#07060d;--surface:#110e1f;--surface2:#1a1530;--text:#eef0ff;--muted:#9a97b8;--pink:#ff2bd6;--cyan:#16f2ff;--green:#39ff88;--line:#2b2450;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:'Rajdhani',system-ui,sans-serif;font-size:18px;line-height:1.5;overflow-x:hidden;
+background-image:linear-gradient(rgba(22,242,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(22,242,255,.04) 1px,transparent 1px);background-size:44px 44px}
+h1,h2,h3,.logo{font-family:'Orbitron',Impact,sans-serif;letter-spacing:.04em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,6,13,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:900;font-size:20px}.logo b{color:var(--pink);text-shadow:0 0 12px var(--pink)}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:700;text-transform:uppercase;font-size:15px}
+nav ul a:hover{color:var(--cyan)}
+@media(max-width:640px){nav ul{display:none}}
+.hero{padding:80px 0 70px;text-align:center;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(255,43,214,.22),transparent 55%),radial-gradient(circle at 80% 70%,rgba(22,242,255,.15),transparent 50%);pointer-events:none}
+.tag{display:inline-block;border:1px solid var(--green);color:var(--green);padding:4px 14px;border-radius:99px;font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
+h1{font-size:clamp(40px,10vw,92px);font-weight:900;line-height:1.02;position:relative}
+h1 span{color:var(--cyan);text-shadow:0 0 24px rgba(22,242,255,.7)}
+h1 em{font-style:normal;color:var(--pink);text-shadow:0 0 24px rgba(255,43,214,.7)}
+.hero p{max-width:560px;margin:22px auto 32px;color:var(--muted);font-size:21px;position:relative}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn{padding:14px 28px;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.06em;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:.2s}
+.b1{background:var(--pink);color:#fff;box-shadow:0 0 30px rgba(255,43,214,.5)}.b1:hover{transform:translateY(-3px)}
+.b2{background:var(--cyan);color:#05060c}.b2:hover{transform:translateY(-3px)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:56px;position:relative}
+.stat{background:var(--surface);border:1px solid var(--line);padding:18px 8px}
+.stat b{display:block;font-family:Orbitron,sans-serif;font-size:clamp(22px,5vw,34px);color:var(--green)}
+.stat span{color:var(--muted);font-size:15px;text-transform:uppercase;letter-spacing:.08em}
+section{padding:70px 0}
+h2{font-size:clamp(26px,5vw,40px);text-align:center;margin-bottom:10px}
+h2 span{color:var(--pink)}
+.sub{text-align:center;color:var(--muted);margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:linear-gradient(160deg,var(--surface2),var(--surface));border:1px solid var(--line);padding:28px 22px;position:relative;transition:.25s}
+.card:hover{border-color:var(--cyan);transform:translateY(-5px);box-shadow:0 10px 40px rgba(22,242,255,.12)}
+.card i{font-style:normal;font-size:40px;display:block;margin-bottom:12px}
+.card h3{font-size:18px;margin-bottom:6px}.card p{color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.ph{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:54px;border:1px solid var(--line);background:linear-gradient(135deg,#1c1240,#0d2a3a);position:relative;overflow:hidden}
+.ph:nth-child(2n){background:linear-gradient(135deg,#3a0f36,#14102b)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph small{position:absolute;bottom:8px;left:10px;font-size:13px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.contact{background:var(--surface);border-block:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.c{display:flex;gap:14px;align-items:center;background:var(--bg);border:1px solid var(--line);padding:18px;transition:.2s}
+.c:hover{border-color:var(--pink);box-shadow:0 0 24px rgba(255,43,214,.2)}
+.c i{font-style:normal;font-size:30px}.c small{display:block;color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:.1em}.c b{font-size:20px}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#top">BOUDI<b>GAMES</b></a>
+<ul><li><a href="#produits">Produits</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<span class="tag">🇹🇳 Gaming Store • Tunisie</span>
+<h1>BOUDI <em>GAMES</em><br><span>PLAY</span> HARDER</h1>
+<p>Votre univers gaming en Tunisie : consoles, manettes et accessoires pour passer au niveau supérieur.</p>
+<div class="btns">
+<a class="btn b1" href="https://wa.me/21655208747" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+<a class="btn b2" href="tel:+21655208747">📞 55 208 747</a></div>
+<div class="stats">
+<div class="stat"><b>11,7K</b><span>Followers</span></div>
+<div class="stat"><b>100%</b><span>Gaming</span></div>
+<div class="stat"><b>TN</b><span>Livraison</span></div></div>
+</div></header>
+
+<section id="produits"><div class="wrap">
+<h2>NOS <span>PRODUITS</span></h2><p class="sub">Tout ce qu'il faut à un vrai gamer</p>
+<div class="grid">
+<div class="card"><i>🎮</i><h3>Manettes</h3><p>Manettes pour console et PC, pour jouer avec précision et confort.</p></div>
+<div class="card"><i>🕹️</i><h3>Consoles</h3><p>Les consoles du moment pour toutes vos sessions de jeu.</p></div>
+<div class="card"><i>🔥</i><h3>Offres & Promos</h3><p>Des promotions régulières : suivez-nous sur Instagram pour ne rien rater.</p></div>
+<div class="card"><i>🚚</i><h3>Service client</h3><p>Une équipe disponible par téléphone et WhatsApp pour vous conseiller.</p></div>
+</div></div></section>
+
+<section id="galerie"><div class="wrap">
+<h2>LA <span>GALERIE</span></h2><p class="sub">Retrouvez tous nos produits et vidéos sur Instagram & TikTok</p>
+<div class="gal">
+<div class="ph">🎮<small>Photo 1</small></div><div class="ph">🕹️<small>Photo 2</small></div>
+<div class="ph">🔥<small>Photo 3</small></div><div class="ph">🏆<small>Photo 4</small></div>
+<div class="ph">👾<small>Photo 5</small></div><div class="ph">🎧<small>Photo 6</small></div>
+</div>
+<div class="btns" style="margin-top:34px">
+<a class="btn b1" href="https://www.instagram.com/boudigames/" target="_blank" rel="noopener">Voir sur Instagram</a>
+<a class="btn b2" href="https://www.tiktok.com/@boudi.games" target="_blank" rel="noopener">Voir sur TikTok</a></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<h2>CONTACTEZ-<span>NOUS</span></h2><p class="sub">Une question ? Une commande ? On est là.</p>
+<div class="cgrid">
+<a class="c" href="tel:+21655208747"><i>📞</i><div><small>Téléphone</small><b>55 208 747</b></div></a>
+<a class="c" href="https://wa.me/21655208747" target="_blank" rel="noopener"><i>💬</i><div><small>WhatsApp</small><b>55 208 747</b></div></a>
+<a class="c" href="https://www.instagram.com/boudigames/" target="_blank" rel="noopener"><i>📸</i><div><small>Instagram</small><b>@boudigames</b></div></a>
+<a class="c" href="https://www.tiktok.com/@boudi.games" target="_blank" rel="noopener"><i>🎵</i><div><small>TikTok</small><b>@boudi.games</b></div></a>
+</div></div></section>
+
+<footer><div class="wrap">© 2026 BOUDI GAMES 🎮 – Votre univers gaming en Tunisie 🇹🇳</div></footer>
+</body>
+</html>
